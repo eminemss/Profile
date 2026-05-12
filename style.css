@@ -125,6 +125,49 @@ header .navbar ul li a:hover {
   padding: 0.5rem 0;
 }
 /* navbar ends */
+/* navbar mobile responsiveness */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 5%;
+    height: 5rem;
+  }
+
+  /* prevent content from hiding behind the fixed navbar */
+  section {
+    padding-top: 7.5rem;
+  }
+
+  header .name {
+    font-size: 1.5rem;
+  }
+
+  header .name i {
+    font-size: 2rem;
+  }
+
+  header .navbar ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem 0.8rem;
+  }
+
+  header .navbar li {
+    margin-left: 0;
+  }
+
+  header .navbar ul li a {
+    font-size: 1.2rem;
+    padding: 0.2rem 0;
+  }
+
+  header .navbar ul li a.active,
+  header .navbar ul li a:hover {
+    border-bottom-width: 0.15rem;
+    padding: 0.3rem 0;
+  }
+}
+
+/* nav bar mobile ends*/
 /* hero section starts*/
 .home {
   position: relative;
@@ -259,8 +302,8 @@ header .navbar ul li a:hover {
 .social-icons a.github:hover {
   background-color: #0e0e0e;
 }
-.social-icons a.twitter:hover {
-  background-color: #00aced;
+.social-icons a.tiktok:hover {
+  background-color: #040404;
 }
 .social-icons a.linkedin:hover {
   background-color: #0072b1;
@@ -430,3 +473,5 @@ body.dark-mode .about .heading span {
 }
 /* about media queries ends*/
 /* about section ends */
+
+
