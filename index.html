@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/95a2002ecf.js" crossorigin="anonymous"></script>
+    <!--icon logo-->
+    <title>Portfolio | Gian Flores</title>
 </head>
 <body>
     <header>
-        <h1> try kung nag commit ulit</h1>
+        <a href="#about" class="name"><i class="fa-solid fa-code"></i> Gian Flores</a>
         
         <nav class="navbar">
             <ul>
@@ -16,10 +19,113 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#work">School Projects</a></li>
+            <li class="work-item"><a href="#work">School Projects</a></li>
+            <li class="theme-toggle-item">
+                <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
             </ul>
         </nav>
 </header>
 <!-- navbar ends -->
+ <!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There My Friend,<br/> I'm Gian Allan Flores <span></span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="facebook" aria-label="Facebook" href="https://www.facebook.com/people/Code-With-Tanveer/100090088137923/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/codewithtanveer/"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/tanveer-ahmad-934155227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="twitter" aria-label="twitter" href="https://twitter.com/ansaritanveer09?t=djOjp9Qx9fn4MNXnPF96Pw&s=09" target="_blank"><i class="fab fa-twitter"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/CodeWithTanveer" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="dev" aria-label="Dev" href="https://www.youtube.com/channel/UCUHWQr2ACeR2lSMXABALxHw" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./images/Img_ko.png" alt="" height="">
+</div>
+</section>
+<!-- hero section ends -->
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./images/Img_ko.png" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Gian Florees</h3>
+        <span class="tag">Software Developer</span>
+        
+        <p>I am a Software Developer based in Cavite, Philippines. 
+          I am very very passionate about improving my coding skills & websites.
+          Working for myself to improve my skills.
+          Love to build Full-Stack clones. </p>
+        
+        <div class="box-container">
+            <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +69 969 614 5811</p>
+            </div>
+            <div class="box">
+              <p><span> email : </span> gianallanflores14@gmail.com</p>
+              <p><span> place : </span> Imus Cavite, Philippines</p>
+            </div>
+        </div>
+        
+       <div class="resumebtn">
+<a href="./assets/resume/resume.pdf" download class="btn">
+        <span>Resume</span>
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</div>
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<script>
+  (function () {
+    const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      // Swap icon (moon <-> sun) based on current theme
+      const isDarkMode = body.classList.contains('dark-mode');
+      const icon = toggleBtn.querySelector('i');
+      if (icon) {
+        if (isDarkMode) {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      }
+    });
+
+    // Ensure correct icon on initial load (e.g., if dark-mode was set elsewhere)
+    const initialIsDarkMode = body.classList.contains('dark-mode');
+    const initialIcon = toggleBtn.querySelector('i');
+    if (initialIcon && initialIsDarkMode) {
+      initialIcon.classList.remove('fa-moon');
+      initialIcon.classList.add('fa-sun');
+    }
+  })();
+</script>
 </body>
 </html>
+
