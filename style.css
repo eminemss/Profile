@@ -210,7 +210,7 @@ header .navbar ul li a:hover {
   }
   header .navbar {
     position: fixed;
-    top: 6.5rem;
+    top: 4.9rem;
     right: -120%;
     width: 75%;
     height: 100%;
