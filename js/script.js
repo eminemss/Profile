@@ -184,6 +184,39 @@ srtop.reveal('.education .box', { interval: 200 });
 srtop.reveal('.work .box', { interval: 100 });
 
 
+ const filterButtons = document.querySelectorAll(".filter-btn");
+  const boxes = document.querySelectorAll(".box");
 
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+      // remove active class
+      filterButtons.forEach(btn => btn.classList.remove("is-active"));
+
+      // add active class
+      button.classList.add("is-active");
+
+      const filter = button.getAttribute("data-filter");
+
+      boxes.forEach(box => {
+        const category = box.getAttribute("data-category");
+
+        if (category === filter) {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // show website by default
+  window.addEventListener("DOMContentLoaded", () => {
+    boxes.forEach(box => {
+      if (box.getAttribute("data-category") !== "website") {
+        box.style.display = "none";
+      }
+    });
+  });
 
 
