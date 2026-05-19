@@ -44,11 +44,11 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["you?", "web designing", "game development", " medjo Full Stack Web Development"],
+strings: ["you?  ", "Web Designing ", "Game Development ", " medjo Full Stack Web Development "],
     loop: true,
-    typeSpeed: 60,
+    typeSpeed: 30,
     backSpeed: 30,
-    backDelay: 500,
+    backDelay: 400,
 });
 // <!-- typed js effect ends -->
 
